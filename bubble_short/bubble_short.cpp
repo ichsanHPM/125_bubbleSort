@@ -26,7 +26,19 @@ void input() {                      //procedur untuk input
         cin >> a[i];                                //Input dari pengguna
 
     }
-}
+}  
+
+void bubbleSortArray() {                        //procedur untuk mengurutkan array dengan metode bubble short
+    for (int i = 1; i < n; i++) {               //looping dengan i dimulai dari 1 hingga n-1
+        for (int j = 0; j < n - i; j++) {       //looping dengan j dimulai dari 0  hingga n -i-1
+            if (a[j] > a[j + 1]) {              //jika nilai pada a[j] lebih besar dari a[j+1]
+                int temp = a[j];                //simpan nilai a[j] ke variable sementara temp
+                a[j] = a[j + 1];                //assign nilai a[j+1] ke a [j]
+                a[j + 1] = temp;                //Asign nilai temp ke a[j+1]
+            }
+        }
+    }
+}           
 
 void unsorted() {                                     //procedur untuk menampilkan hasil
     cout << endl;                                    //Output baris kosong
@@ -53,7 +65,13 @@ void display() {                                     //procedur untuk menampilka
 }
 
 int main() {
-    
+    input();                                                 //Memanggil procedur read()
+    unsorted();                                              //Memanggil procedur unsorted() dari
+    bubbleSortArray();                                      //memanggil procedur bubbleshortArray()
+    display();                                              //memanggil procedur display()
+
+    return 0;
+
 }
 
 
