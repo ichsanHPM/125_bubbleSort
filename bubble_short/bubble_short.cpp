@@ -23,14 +23,25 @@ void input() {                      //procedur untuk input
 
     for (int i = 0; i < n; i++) {                   //Looping dengan i dimulai dari 0 hingga n-1
         cout << "data ke-" << (i + 1) << ": ";      //Output ke layar
-        cin >> a[i];                               //Input dari pengguna
+        cin >> a[i];                                //Input dari pengguna
 
     }
 }
 
-    
+void unsorted() {                                     //procedur untuk menampilkan hasil
+    cout << endl;                                    //Output baris kosong
+    cout << "==================" << endl;           //Output ke layar
+    cout << "Element Array yang belum tersusun" << endl;     //Output ke layar
+    cout << "==================" << endl;                    //Output ke layar
+    for (int j = 0; j < n; j++) {                           //Looping dengan j dimulai dari 0 hingga n-1
+        cout << a[j] << endl;                               //output ke layar
+    }
+    cout << endl;                                           
+}
 
+int main() {
 
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
